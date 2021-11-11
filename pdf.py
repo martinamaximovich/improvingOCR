@@ -36,4 +36,4 @@ print()
 print(frequency)
 
 pdfFile.close()
-~                                                 
+                                               
