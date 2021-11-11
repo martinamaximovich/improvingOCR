@@ -1,4 +1,29 @@
+# -*- coding: utf-8 -*-
+# @Author: Tasdik Rahman
+# @Date:   2016-03-12
+# @Last Modified by:   Tasdik Rahman
+# @Last Modified time: 2016-03-25 20:00:56
+# @MIT License
+# @http://tasdikrahman.me
+# @https://github.com/prodicus
 
+"""
+Tries to remove strings obtained from OCR engines which are garbage.
+An implementation of the paper 
+'Automatic Removal of “Garbage Strings” in OCR Text: An Implementation'
+- by Kazem Taghva , Tom Nartker , Allen Condit , Julie Borsack
+References
+==========
+[1] http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.81.8901
+"""
+
+
+__author__ = "Tasdik Rahman"
+__email__ = "prodicus@outlook.com"
+__version__ = "0.0.1"
+__title__ = 'pyRmgarbage'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2016 Tasdik Rahman'
 import re
 
 
