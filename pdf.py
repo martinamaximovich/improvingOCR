@@ -10,6 +10,8 @@ pdfFile = open(txt, 'rb')
 
 pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
+garbagecount = 0
+wordcount = 0
 numberOfPages = pdfReader.numPages
 garbageWords = []
 garbage = Rmgarbage()
@@ -26,16 +28,23 @@ for x in range(numberOfPages):
 
     for word in words:
         isGarbage = garbage.is_garbage(word)
+        wordcount += 1
         if isGarbage != False:
             garbageWords.append(word)
+            garbagecount += 1
 
     #print()
     print(page.extractText())
 
 frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
-df.to_excel("output.xlsx") // create output.xlsx file prior to use
+df.to_excel("output.xlsx")
+ratio = garbagecount/wordcount
 print()
 print(df)
+print()
+print("Ratio: ")
+print(float(ratio))
 
-pdfFile.close()                        
+pdfFile.close()
+
