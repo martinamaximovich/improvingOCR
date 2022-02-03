@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 from collections import Counter
 import PyPDF2
@@ -5,26 +6,30 @@ import rmgarbage
 from rmgarbage import Rmgarbage
 
 
-txt = input("Enter the name of the PDF file you want to convert to text.\n")
-pdfFile = open(txt, 'rb')
+#txt = input("Enter the name of the OCR input you want to check for anomalous text.\n")
+parser = argparse.ArgumentParser(description='Process OCR Output')
+parser.add_argument('ocrFile', type=argparse.FileType('r'))
+args = parser.parse_args()
 
-pdfReader = PyPDF2.PdfFileReader(pdfFile)
+with open(args.ocrFile) as file:
 
-garbagecount = 0
-wordcount = 0
-numberOfPages = pdfReader.numPages
-garbageWords = []
-garbage = Rmgarbage()
-garbage.__init__()
+#pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
-for x in range(numberOfPages):
+    garbagecount = 0
+    wordcount = 0
+    #numberOfPages = pdfReader.numPages
+    garbageWords = []
+    garbage = Rmgarbage()
+    garbage.__init__()
+
+#for x in range(numberOfPages):
     #print()
     #print()
     #print()
     #print('Page ' + str(x + 1))
-    page = pdfReader.getPage(x)
-    allWords = page.extractText()
-    words = allWords.split()
+    #page = pdfReader.getPage(x)
+    #allWords = page.extractText()
+    words = ocrFile.split()
 
     for word in words:
         isGarbage = garbage.is_garbage(word)
@@ -34,17 +39,11 @@ for x in range(numberOfPages):
             garbagecount += 1
 
     #print()
-    print(page.extractText())
+    #print(page.extractText())
 
 frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
 df.to_excel("output.xlsx")
 ratio = garbagecount/wordcount
 print()
-print(df)
-print()
-print("Ratio: ")
-print(float(ratio))
 
-pdfFile.close()
-#test
