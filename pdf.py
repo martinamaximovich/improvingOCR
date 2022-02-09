@@ -8,13 +8,15 @@ from rmgarbage import Rmgarbage
 
 #txt = input("Enter the name of the OCR input you want to check for anomalous text.\n")
 parser = argparse.ArgumentParser(description='Process OCR Output')
-parser.add_argument('ocrFile', type=argparse.FileType('r'))
+parser.add_argument('ocrFile')
 args = parser.parse_args()
 
 with open(args.ocrFile) as file:
 
 #pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
+    #words = [i.split(' ') for i in file]
+    words = (file.read()).split(" ")
     garbagecount = 0
     wordcount = 0
     #numberOfPages = pdfReader.numPages
@@ -29,7 +31,9 @@ with open(args.ocrFile) as file:
     #print('Page ' + str(x + 1))
     #page = pdfReader.getPage(x)
     #allWords = page.extractText()
-    words = ocrFile.split()
+    #words = words.split()
+
+    #words = list(words)
 
     for word in words:
         isGarbage = garbage.is_garbage(word)
@@ -45,5 +49,4 @@ frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
 df.to_excel("output.xlsx")
 ratio = garbagecount/wordcount
-print()
-
+print(ratio)
