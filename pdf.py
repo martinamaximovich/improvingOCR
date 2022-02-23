@@ -52,7 +52,7 @@ with open(args.ocrFile) as file:
 
 frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
-df.to_excel("output.xlsx")
+df.to_excel("output.xlsx", engine="xlsxwriter")
 ratio = (wordcount/garbagecount)
 
 print("File: " + fileName)
