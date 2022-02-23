@@ -15,7 +15,7 @@ fileName = (args.ocrFile).rsplit('/', 1)[-1]
 with open(args.ocrFile) as file:
 
     content = file.read()
-    print(content)
+    #print(content)
 #pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
     #words = [i.split(' ') for i in file]
@@ -39,7 +39,7 @@ with open(args.ocrFile) as file:
     #words = list(words)
 
     for word in words:
-        if (len(word)):
+        if (not word.isspace()):
             isGarbage = garbage.is_garbage(word)
             #print(word, end = ' ')
             wordcount += 1
