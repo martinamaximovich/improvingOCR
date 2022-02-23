@@ -9,7 +9,7 @@
 
 """
 Tries to remove strings obtained from OCR engines which are garbage.
-An implementation of the paper 
+An implementation of the paper
 'Automatic Removal of “Garbage Strings” in OCR Text: An Implementation'
 - by Kazem Taghva , Tom Nartker , Allen Condit , Julie Borsack
 References
@@ -25,6 +25,9 @@ __title__ = 'pyRmgarbage'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2016 Tasdik Rahman'
 import re
+import requests
+from bs4 import BeautifulSoup
+#import urllib2
 
 
 class Rmgarbage(object):
@@ -146,7 +149,7 @@ class Rmgarbage(object):
         Customisation
         =============
         false positive on "needed.The". Exclude fullstop-capital.
-        Extra customisation: Exclude hyphen-capital, apostrophe-capital and 
+        Extra customisation: Exclude hyphen-capital, apostrophe-capital and
         forwardslash-capital
         :param string: string to be tested
         :returns: either True or False
@@ -158,6 +161,27 @@ class Rmgarbage(object):
                    (index > 0 and string_middle[index-1] in ".-'"):
                     return True
         return False
+
+    '''
+    def googleResults(self, string):
+
+        #If a string has less than 15 Google results, it is garbage.
+
+
+        address = 'http://www.google.com/search?q=' + string
+        results = 0
+        page = requests.get(address)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        resultsString = soup.find(id="resultStats")
+
+        if resultsString is not None:
+            results = int(resultsString.text.split(' ')[1].replace(',',''))
+
+        if results < 15:
+            return True
+
+        return False
+        '''
 
     def is_garbage(self, string):
         """
@@ -179,5 +203,7 @@ class Rmgarbage(object):
             return 'P'
         elif self.has_uppercase_within_lowercase(string):
             return 'C'
+        #elif self.googleResults(string):
+            #return 'G'
         return False
 
