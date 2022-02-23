@@ -13,10 +13,12 @@ args = parser.parse_args()
 
 with open(args.ocrFile) as file:
 
+    content = file.read()
+    print(content)
 #pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
     #words = [i.split(' ') for i in file]
-    words = (file.read()).split(" ")
+    words = content.split(" ")
     garbagecount = 0
     wordcount = 0
     #numberOfPages = pdfReader.numPages
@@ -37,6 +39,7 @@ with open(args.ocrFile) as file:
 
     for word in words:
         isGarbage = garbage.is_garbage(word)
+        #print(word, end = ' ')
         wordcount += 1
         if isGarbage != False:
             garbageWords.append(word)
@@ -48,5 +51,5 @@ with open(args.ocrFile) as file:
 frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
 df.to_excel("output.xlsx")
-ratio = garbagecount/wordcount
+ratio = (wordcount/garbagecount) * 100
 print(ratio)
