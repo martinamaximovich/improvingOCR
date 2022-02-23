@@ -10,6 +10,7 @@ from rmgarbage import Rmgarbage
 parser = argparse.ArgumentParser(description='Process OCR Output')
 parser.add_argument('ocrFile')
 args = parser.parse_args()
+fileName = (args.ocrFile).rsplit('/', 1)[-1]
 
 with open(args.ocrFile) as file:
 
@@ -52,6 +53,8 @@ frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
 df.to_excel("output.xlsx")
 ratio = (wordcount/garbagecount)
+
+print("File: " + fileName)
 print("Number of words: " + str(wordcount))
 print("Number of garbage words: " + str(garbagecount))
-print("Ratio: " + str(ratio))
+print("Score: " + str(ratio))
