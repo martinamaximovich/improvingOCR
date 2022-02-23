@@ -16,7 +16,7 @@ with open(args.ocrFile) as file:
 
     content = file.read()
     #print(content)
-#pdfReader = PyPDF2.PdfFileReader(pdfFile)
+    #pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
     #words = [i.split(' ') for i in file]
     words = content.split(" ")
@@ -53,10 +53,18 @@ with open(args.ocrFile) as file:
 frequency = Counter(garbageWords)
 df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
 df.to_excel("output.xlsx", engine="xlsxwriter")
-ratio = (wordcount/garbagecount)
+ratio = 100 - ((garbagecount/wordcount) * 100)
 
+summary = [[fileName, wordcount, garbagecount, ratio]]
+summaryTable = pd.DataFrame(summary, columns = ["File Name", "Number of Words", "Number of Garbage Words", "Score"])
+print(summaryTable)
+print()
+
+""""
 print("File: " + fileName)
 print("Number of words: " + str(wordcount))
 print("Number of garbage words: " + str(garbagecount))
 print("Score: " + str(ratio))
 print()
+"""
+
