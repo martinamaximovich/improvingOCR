@@ -39,12 +39,13 @@ with open(args.ocrFile) as file:
     #words = list(words)
 
     for word in words:
-        isGarbage = garbage.is_garbage(word)
-        #print(word, end = ' ')
-        wordcount += 1
-        if isGarbage != False:
-            garbageWords.append(word)
-            garbagecount += 1
+        if (len(word)):
+            isGarbage = garbage.is_garbage(word)
+            #print(word, end = ' ')
+            wordcount += 1
+            if isGarbage != False:
+                garbageWords.append(word)
+                garbagecount += 1
 
     #print()
     #print(page.extractText())
@@ -58,3 +59,4 @@ print("File: " + fileName)
 print("Number of words: " + str(wordcount))
 print("Number of garbage words: " + str(garbagecount))
 print("Score: " + str(ratio))
+print()
