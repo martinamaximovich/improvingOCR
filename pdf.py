@@ -9,6 +9,9 @@ from rmgarbage import Rmgarbage
 #txt = input("Enter the name of the OCR input you want to check for anomalous text.\n")
 class improvingOCR:
 
+    def __init__(self):
+        pass
+
     def garbageDetector(filepath):
 
         #parser = argparse.ArgumentParser(description='Process OCR Output')
