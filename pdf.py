@@ -7,64 +7,69 @@ from rmgarbage import Rmgarbage
 
 
 #txt = input("Enter the name of the OCR input you want to check for anomalous text.\n")
-parser = argparse.ArgumentParser(description='Process OCR Output')
-parser.add_argument('ocrFile')
-args = parser.parse_args()
-fileName = (args.ocrFile).rsplit('/', 1)[-1]
+class improvingOCR:
 
-with open(args.ocrFile) as file:
+    def garbageDetector(filepath):
 
-    content = file.read()
-    #print(content)
-    #pdfReader = PyPDF2.PdfFileReader(pdfFile)
+        #parser = argparse.ArgumentParser(description='Process OCR Output')
+        #parser.add_argument('ocrFile')
+        #args = parser.parse_args()
+        #fileName = (args.ocrFile).rsplit('/', 1)[-1]
 
-    #words = [i.split(' ') for i in file]
-    words = content.split(" ")
-    garbagecount = 0
-    wordcount = 0
-    #numberOfPages = pdfReader.numPages
-    garbageWords = []
-    garbage = Rmgarbage()
-    garbage.__init__()
+        #with open(args.ocrFile) as file:
+        with open(filepath) as file:
+
+            content = file.read()
+            #print(content)
+            #pdfReader = PyPDF2.PdfFileReader(pdfFile)
+
+            #words = [i.split(' ') for i in file]
+            words = content.split(" ")
+            garbagecount = 0
+            wordcount = 0
+            #numberOfPages = pdfReader.numPages
+            garbageWords = []
+            garbage = Rmgarbage()
+            garbage.__init__()
 
 #for x in range(numberOfPages):
-    #print()
-    #print()
-    #print()
-    #print('Page ' + str(x + 1))
-    #page = pdfReader.getPage(x)
-    #allWords = page.extractText()
-    #words = words.split()
+            #print()
+            #print()
+            #print()
+            #print('Page ' + str(x + 1))
+            #page = pdfReader.getPage(x)
+            #allWords = page.extractText()
+            #words = words.split()
 
-    #words = list(words)
+            #words = list(words)
 
-    for word in words:
-        if (not word.isspace()):
-            isGarbage = garbage.is_garbage(word)
-            #print(word, end = ' ')
-            wordcount += 1
-            if isGarbage != False:
-                garbageWords.append(word)
-                garbagecount += 1
+            for word in words:
+                if (not word.isspace()):
+                    isGarbage = garbage.is_garbage(word)
+                    #print(word, end = ' ')
+                    wordcount += 1
+                    if isGarbage != False:
+                        garbageWords.append(word)
+                        garbagecount += 1
 
-    #print()
-    #print(page.extractText())
+            #print()
+            #print(page.extractText())
 
-frequency = Counter(garbageWords)
-df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
-df.to_excel("output.xlsx", engine="xlsxwriter")
-ratio = 100 - ((garbagecount/wordcount) * 100)
+        frequency = Counter(garbageWords)
+        df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
+        df.to_excel("output.xlsx", engine="xlsxwriter")
+        ratio = 100 - ((garbagecount/wordcount) * 100)
 
-summary = [[fileName, wordcount, garbagecount, ratio]]
-summaryTable = pd.DataFrame(summary, columns = ["File Name", "Number of Words", "Number of Garbage Words", "Score"])
-print(summaryTable)
-print()
+        summary = [[fileName, wordcount, garbagecount, ratio]]
+        summaryTable = pd.DataFrame(summary, columns = ["File Name", "Number of Words", "Number of Garbage Words", "Score"])
+        print(summaryTable)
+        print()
 
-""""
-print("File: " + fileName)
-print("Number of words: " + str(wordcount))
-print("Number of garbage words: " + str(garbagecount))
-print("Score: " + str(ratio))
-print()
-"""
+        """"
+        print("File: " + fileName)
+        print("Number of words: " + str(wordcount))
+        print("Number of garbage words: " + str(garbagecount))
+        print("Score: " + str(ratio))
+        print()
+        """
 
