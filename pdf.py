@@ -18,6 +18,7 @@ class improvingOCR:
         #parser.add_argument('ocrFile')
         #args = parser.parse_args()
         #fileName = (args.ocrFile).rsplit('/', 1)[-1]
+        fileName = (filepath).rsplit('/', 1)[-1]
 
         #with open(args.ocrFile) as file:
         with open(filepath) as file:
