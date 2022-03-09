@@ -59,9 +59,16 @@ class improvingOCR:
             #print()
             #print(page.extractText())
 
+
         frequency = Counter(garbageWords)
+        '''
         df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
         df.to_excel("output.xlsx", engine="xlsxwriter")
+        '''
+        writer = pd.ExcelWriter('filename.xlsx', engine='xlsxwriter', options={'strings_to_formulas': False})
+        df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
+        df.to_excel(writer, sheet_name='Sheet1', index=False)
+        writer.save()
 
         ratio = 0
 
