@@ -61,7 +61,15 @@ class improvingOCR:
         frequency = Counter(garbageWords)
         df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
         df.to_excel("output.xlsx", engine="xlsxwriter")
-        ratio = 100 - ((garbagecount/wordcount) * 100)
+
+        ratio = 0
+
+        if wordcount == 0:
+            ratio = 100
+
+        else:
+            ratio = 100 - ((garbagecount/wordcount) * 100)
+            ratio = int(ratio)
 
         summary = [[fileName, wordcount, garbagecount, ratio]]
         summaryTable = pd.DataFrame(summary, columns = ["File Name", "Number of Words", "Number of Garbage Words", "Score"])
