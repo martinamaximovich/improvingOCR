@@ -48,7 +48,7 @@ class improvingOCR:
             #words = list(words)
 
             for word in words:
-                if (not word.isspace()):
+                #if (not word.isspace()):
                     isGarbage = garbage.is_garbage(word)
                     #print(word, end = ' ')
                     wordcount += 1
@@ -65,6 +65,7 @@ class improvingOCR:
 
         ratio = 0
 
+        #account for divide by 0 error
         if wordcount == 0:
             ratio = 100
 
