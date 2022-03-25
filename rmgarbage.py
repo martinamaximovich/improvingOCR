@@ -139,6 +139,7 @@ class Rmgarbage(object):
                 return True
         return False
 
+    '''
     def has_uppercase_within_lowercase(self, string):
         """
         Rule C
@@ -161,7 +162,7 @@ class Rmgarbage(object):
                    (index > 0 and string_middle[index-1] in ".-'"):
                     return True
         return False
-
+    '''
     '''
     def googleResults(self, string):
 
@@ -201,8 +202,8 @@ class Rmgarbage(object):
             return 'V'
         elif self.has_two_distinct_puncts_inside(string):
             return 'P'
-        elif self.has_uppercase_within_lowercase(string):
-            return 'C'
+        #elif self.has_uppercase_within_lowercase(string):
+            #return 'C'
         #elif self.googleResults(string):
             #return 'G'
         return False

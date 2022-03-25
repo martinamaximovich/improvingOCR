@@ -28,7 +28,7 @@ class improvingOCR:
             #pdfReader = PyPDF2.PdfFileReader(pdfFile)
 
             #words = [i.split(' ') for i in file]
-            words = content.split(" ")
+            words = content.split()
             garbagecount = 0
             wordcount = 0
             #numberOfPages = pdfReader.numPages
@@ -65,7 +65,10 @@ class improvingOCR:
         df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
         df.to_excel("output.xlsx", engine="xlsxwriter")
         '''
-        writer = pd.ExcelWriter('filename.xlsx', engine='xlsxwriter', engine_kwargs= {'options': {'strings_to_formulas': False}})
+
+        stringWriter = fileName + '.xlsx'
+
+        writer = pd.ExcelWriter(stringWriter, engine='xlsxwriter', engine_kwargs= {'options': {'strings_to_formulas': False}})
         df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
         df.to_excel(writer, sheet_name='Sheet1', index=False)
         writer.save()
