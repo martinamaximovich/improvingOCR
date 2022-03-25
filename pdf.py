@@ -68,7 +68,7 @@ class improvingOCR:
 
         stringWriter = fileName + '.xlsx'
 
-        writer = pd.ExcelWriter(stringWriter, engine='xlsxwriter', engine_kwargs= {'options': {'strings_to_formulas': False}})
+        writer = pd.ExcelWriter(stringWriter, engine='xlsxwriter', engine_kwargs= {'options': {'strings_to_formulas': False, 'strings_to_urls': False}})
         df = pd.DataFrame.from_records(frequency.most_common(), columns=['page','count'])
         df.to_excel(writer, sheet_name='Sheet1', index=False)
         writer.save()
