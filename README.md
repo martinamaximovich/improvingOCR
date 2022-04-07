@@ -1,5 +1,5 @@
 # improvingOCR
-a command-line utility and Python package for detecting garbage strings in PDFs
+a command-line utility and Python package for detecting garbage strings in text files
 
 # Installation
 pip install pdf 
@@ -7,16 +7,16 @@ pip install pdf
 # Usage
 ```
 # from the command line
-usage: pdf.py pdf_file 
-Generates an excel file containing garbage strings in PDF
+usage: pdf.py text_file 
+Generates an excel file containing garbage strings in text file
 
 positional arguments:
-  pdf_file          PDF file provided as input
+  text_file          text file provided as input
   
 # from within python
 from pdf import improvingOCR
 improvingOCR.garbageDetector(filepath)
 
 method arguments:
-filepath            path to PDF file 
+filepath            path to text file 
 ```
