@@ -1,0 +1,303 @@
+                                                                                Benjamin Lis <bl2759@columbia.edu>
+
+
+
+ACM TechNews, Friday, October 30, 2020
+ACM TechNews <technews-editor@acm.org>                                                   Fri, Oct 30, 2020 at 12:35 PM
+To: Benjamin Lis <bl2759@columbia.edu>
+
+                                          Click here to view this online
+
+
+
+
+                       MEMBERNET                                                 ARCHIVES
+
+                      CAREERNEWS                                                CONTACT US
+
+     Welcome to the October 30, 2020 edition of ACM TechNews, providing timely information for IT
+     professionals three times a week.
+
+     ACM TechNews mobile apps are available for Android phones and tablets (click here) and for
+     iPhones (click here) and iPads (click here).
+
+     To view "Headlines At A Glance," hit the link labeled "Click here to view this online" found at the
+     top of the page in the html version. The online version now has a button at the top labeled "Show
+     Headlines."
+
+
+
+
+     H     k      R l             G         i    C          t El           ti     D t       Aft
+Hacker Releases Georgia County Election Data After
+Ransom Not Paid
+The Wall Street Journal
+Tawnell D. Hobbs
+October 28, 2020
+
+A computer hacker publicly released election-related files from Hall County, GA, after county
+officials failed to pay a ransom. The hacker labeled the released data as "example files," which
+generally are used to encourage ransom payment before more-compromising information is made
+public. A review of the DoppelPaymer ransomware group's website shows the hacked files contain
+voter names and registration numbers and an election-equipment inventory, among other things.
+The county announced the ransomware attack on Oct. 7, but has not commented about the
+amount of ransom demanded. Said Brett Callow of cybersecurity firm Emsisoft, "What, if any,
+other data the criminals obtained during the attack is something only they and, perhaps, Hall
+County know.”
+
+
+  Full Article
+*May Require Paid Registration
+
+
+
+
+The Algorithm That Could Get You Back in the Office
+Bloomberg
+Andrew Zaleski
+October 27, 2020
+
+As company offices reopen, some are using software to help them shuffle employees, schedule
+meetings, map office hot spots, and practice social distancing. Maptician detects areas of high
+transmission risk, such as desks placed too close together, and allows co-workers to view the map
+to see if they were ever seated near a colleague who tested positive for Covid-19. Employees of
+commercial real estate brokerage SquareFoot developed an algorithm to determine work rotations
+for a company’s teams. Salesforce's Work.com has developed a software platform that includes a
+shift-management algorithm that calculates potential building bottlenecks based on the number of
+projected workers.
+  Full Article
+
+
+
+
+Scientists Used 3D Printer to Create World's Smallest
+Boat
+CNN
+Amy Woodyatt
+October 28, 2020
+
+Researchers at Leiden University in the Netherlands created the world's smallest boat using an
+electron microscope and a high-resolution three-dimensional (3D) printer. The 30-micrometer-
+long boat was developed as part of an investigation into synthetic, self-propelled microswimmers
+that could travel inside the human body to administer medical treatments, among other things. As
+part of the study, the researchers created objects as small as 4 micrometers. Said Leiden's
+Daniela Kraft, "We hope to learn about what is now a good design principle for creating a little
+drug delivery vehicle.”
+
+
+  Full Article
+Raptor-Inspired Drone with Morphing Wing, Tail
+EPFL (Switzerland)
+October 28, 2020
+
+A next-generation drone developed by engineers at the Swiss Federal Institute of Technology
+Lausanne (EPFL) has a feathered wing and tail for increased flight agility. The northern goshawk, a
+type of raptor (bird of prey), served as the inspiration for the drone. Artificial feathers allow the
+drone to adjust the shape of its wing and tail, but a propeller is used for forward thrust, which is
+more efficient than flapping wings. Said EPFL's Enrico Ajanic, "Our design extracts principles of
+avian agile flight to create a drone that can approximate the flight performance of raptors, but
+also tests the biological hypothesis that a morphing tail plays an important role in achieving faster
+turns, decelerations, and even slow flight."
+
+
+  Full Article
+
+
+Researchers Break Magnetic Memory Speed Record
+Berkeley News
+October 27, 2020
+
+An international research team led by the French National Centre for Scientific Research developed
+a new method for magnetization switching that is almost 100 times faster than state-of-the-art
+spintronic devices. The researchers achieved magnetization switching, or writing information into
+magnetic memory, by directing an optical pump at a photoconductive switch to convert light into
+six-picosecond electrical pulses that were guided toward a magnet. This technique could pave the
+way for ultrafast magnetic memory for computer chips that would retain information even when
+power is off. Said the University of California, Berkeley's Jeffrey Bokor, "Such a high-speed, low-
+energy spintronic device can potentially tackle the performance limitations of current processor-
+level memory systems, and it could also be used for logic applications."
+
+
+  Full Article
+
+
+FBI Warns Ransomware Assault Threatens U.S.
+Healthcare System
+Associated Press
+Frank Bajak
+October 29, 2020
+
+The U.S. Federal Bureau of Investigation, Department of Homeland Security, and Department of
+Health and Human Services issued a joint alert this week that they had "credible information of an
+increased and imminent cybercrime threat to U.S. hospitals and healthcare providers" in an effort
+to cause "data theft and disruption of healthcare services." The alert came amid a spike in cases of
+Covid-19 nationwide. At least five U.S. hospitals were hit by the ransomware attacks this week.
+Attacks by an Eastern European criminal gang involved the Ryuk strain of ransomware, which
+Microsoft has been working to counter. Hold Security's Alex Holden said the cybercriminals are
+demanding ransoms of more than $10 million per target, and have discussed plans on the dark
+web to attack more than 400 hospitals, clinics, and other medical facilities.
+
+
+  Full Article
+
+
+Dog Training Methods Help JHU Teach Robots to Learn
+New Tricks
+Johns Hopkins Hub
+Jill Rosen
+October 26, 2020
+
+Computer scientists at Johns Hopkins University used positive reinforcement to show a robot how
+to teach itself new tasks quickly. The training technique, often used to change a dog's behavior,
+helped the robot improve its skills in a matter of days, rather than the month it previously would
+have taken. The researchers used a reward system to help the robot learn from its mistakes.
+When it came to stacking blocks, the robot quickly determined it would earn high points for correct
+behaviors and zero points for failing to grasp a block or knocking over a stack. Said Johns Hopkins'
+Andrew Hundt, "The robot wants the higher score. It quickly learns the right behavior to get the
+best reward.”
+
+
+  Full Article
+
+
+
+
+Motorists' Smartphones May Help Highways Bosses Keep
+Roads Safe
+University of Birmingham
+October 25, 2020
+
+Researchers at the U.K.’s University of Birmingham found that high-resolution three-axis
+accelerometers and GPS tracking built into smartphones, along with an app, can provide useful
+measures of road roughness for civil engineers. This "crowdsourced" data sent by motorists of how
+their vehicle moves vertically in relation to the roadway could be used by road agencies to
+generate a low-cost summary of the condition of the entire road network, evaluate and compare
+generate a low cost summary of the condition of the entire road network, evaluate and compare
+maintenance policies, and screen roads to identify and prioritize maintenance projects. Said the
+university's Michael Burrow, "Vertical acceleration data from smartphones could be analyzed using
+machine learning algorithms to enable [relative road roughness] to be predicted to a similar
+accuracy as would be expected from a visual inspection, but with improved repeatability and
+reproducibility."
+
+
+  Full Article
+
+
+ML Model Supports Safe, Accurate Decision-making for
+Halifax Harbor
+Dalhousie University (Canada)
+Rebecca Rawcliffe
+October 20, 2020
+
+Working with ocean data analytics innovation platform DeepSense, researchers at Canada's
+Dalhousie University have developed a machine learning (ML) system for predicting wind speed
+and wave height, in order to inform safer, more accurate decision-making for the SmartAtlantic
+Herring Cove Buoy platform. Said Melanie Nadeau of the Centre for Ocean Ventures and
+Entrepreneurship, “The Smart Buoy platform hosts several ocean sensors and generates refined
+forecasts that have become a crucial resource for marine users that enter the Halifax Harbour.”
+Dalhousie’s Chris Widden said, “We took the main predictive variables of wind speed and wave
+height, and data related to these variables collected by other smart buoys and land stations, to
+think about how we can use machine learning to make predictions around this activity for the buoy
+at Herring Cove. It’s novel as no one else seems to be making predictions like this from only one
+or two replacement sensors.”
+
+
+  Full Article
+
+
+
+
+Technology Finds Long-Hidden Quakes, Possible Clues
+About How Earthquakes Evolve
+Stanford News
+Josie Garthwaite
+October 21, 2020
+
+Stanford University scientists developed new algorithms that extract evidence of long-hidden
+microquakes from massive seismic datasets. The Earthquake Transformer algorithm emulates how
+human analysts holistically analyze a set of seismic "wiggles," then focuses on a small section of
+interest. The Stanford team measured the algorithm’s performance using five weeks of data
+recorded in the region of Japan impacted two decades ago by the Tottori earthquake and its
+aftershocks. The algorithm detected 21,092 events—more than 2.5 times the number of quakes
+detected manually—within 20 minutes, using data from just 18 of 57 stations originally used to
+study the sequence. Said Stanford’s Gregory Beroza, “Earthquake monitoring using machine
+learning in near-real time is coming very soon.”
+
+
+  Full Article
+
+
+
+
+Reimagining the Shape of Noise Leads to Improved
+Molecular Models
+Lawrence Berkeley National Laboratory
+Greta Lorge
+October 20, 2020
+
+Researchers at the Lawrence Berkeley National Laboratory developed a mathematical concept
+framework to model the presence of noise in data in a more realistic way. The researchers had
+issues with the widely accepted view that experimental errors fall into a classic normal
+distribution, such as the Gaussian bell curve, where close to 100% of observations fall within 3.5
+standard deviations. They determined a more realistic curve has thicker "tails" due to rare but
+predictable events. Said Berkeley Lab's Peter Zwart, "Including these slightly more realistic error
+models in crystallographic target functions allows us to model the presence of what normally
+might be called outliers in a more realistic way."
+
+
+  Full Article
+AI Reveals Hundreds of Millions of Trees in the Sahara
+University of Copenhagen
+October 20, 2020
+
+Researchers at Denmark’s University of Copenhagen, along with international collaborators, used
+artificial intelligence and detailed satellite imagery to count more than 1.8 billion trees and shrubs
+in a 1.3-million-sq.km. area covering the western-most portions of the Sahara Desert, the Sahel
+region, and the sub-humid zones of West Africa. This marks the first time that trees across a large
+dryland region have been counted. The combination of detailed satellite imagery from the U.S.
+National Aeronautics and Space Administration (NASA) and deep learning helped researchers
+determine that trees do grow in the Sahara Desert, counting millions of trees in the desert alone.
+The university's Martin Brandt said the research is important because climate models generally do
+not include trees outside of forested areas.
+
+
+  Full Article
+Researchers Extract Secret Key Used to Encrypt Intel
+CPU Code
+Ars Technica
+Dan Goodin
+October 28, 2020
+
+An independent researcher, working with two researchers from security firm Positive Technologies,
+extracted the secret key that encrypts updates to Intel central processing units (CPUs). Hackers
+who got their hands on the key would be able to decrypt updates Intel issues to plug security
+holes or update other aspects of chip operation. Independent researcher Maxim Goryachy said, "At
+the moment, it is quite difficult to assess the security impact” of being able to obtain such a key.
+Added Positive Technologies' Mark Ermolov, "For now, there's only one but very important
+consequence: independent analysis of a microcode patch that was impossible until now."
+
+
+  Full Article
+Association for Computing Machinery
+
+1601 Broadway, 10th Floor
+New York, NY 10019-7434
+1-800-342-6626
+(U.S./Canada)
+
+
+
+ACM Media Sales
+
+If you are interested in advertising in ACM TechNews or other ACM
+publications, please contact ACM Media Sales or (212) 626-0686, or visit
+ACM Media for more information.
+
+
+
+
+           To submit feedback about ACM TechNews, contact:
+                         technews@hq.acm.org
+
+                                Unsubscribe
+
