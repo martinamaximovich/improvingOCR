@@ -11,6 +11,10 @@ class improvingOCR:
         pass
 
     def garbageDetector(filepath):
+        """Stores garbage text in text file provided by filepath in excel sheet.
+        Paramaters: filepath
+            File path to text file
+        """
         fileName = (filepath).rsplit('/', 1)[-1]
         with open(filepath) as file:
 
@@ -54,7 +58,7 @@ class improvingOCR:
 
     # CLI
     def cli():
-
+        """Process command line arguments."""
          parser = argparse.ArgumentParser(description='Process OCR Output')
          parser.add_argument('ocrFile')
          args = parser.parse_args()
